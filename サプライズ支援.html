@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サプライズ支援：”想い”を届ける移動型イベントプロデュース</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #F7FFF7;
+        }
+        h1, h2, h3, .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 40vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            color: #4ECDC4;
+            align-self: center;
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center my-12 md:my-20">
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text mb-4">Surprise On Wheels</h1>
+            <h2 class="text-xl md:text-2xl font-bold text-gray-800">”想い”を届ける移動型イベントプロデュース</h2>
+            <p class="mt-4 text-lg text-gray-600">車が、人生最高の「感動」を乗せて走る。</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+            <section class="card md:col-span-2 xl:col-span-3">
+                <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">事業コンセプト：移動時間を、忘れられない瞬間に</h3>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-7xl bg-amber-100 p-6 rounded-full text-amber-500">🚗</div>
+                    <div class="flex-1">
+                        <p class="text-lg leading-relaxed">
+                            本事業は、車を単なる移動手段ではなく、<strong class="text-[#FF6B6B]">「感動を演出するためのプライベートな舞台装置」</strong>と再定義します。依頼主の「大切な人に特別な想いを届けたい」という願いを、移動空間の演出、サプライズの企画・実行、そしてその瞬間の映像記録まで、ワンストップでプロデュース。移動時間が、感動的な物語のプロローグ、あるいはクライマックスそのものになる唯一無二の体験を提供します。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card xl:col-span-2">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">事業の仕組み：三者間の「感動共有」モデル</h3>
+                <p class="text-center text-gray-600 mb-8">この事業は、依頼主・事業者・ターゲットの三者がWIN-WIN-WINの関係で繋がることで、持続的な価値が生まれます。</p>
+                <div class="flex flex-col md:flex-row justify-around items-center text-center">
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-5xl mb-2">🎁</div>
+                        <h4 class="text-lg font-bold">依頼主</h4>
+                        <p class="text-sm text-gray-500">特別な体験を贈る</p>
+                        <p class="font-bold text-xl mt-2 text-[#4ECDC4]">⬇</p>
+                        <p class="font-semibold">サービス料 (¥)</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                     <div class="flow-arrow md:hidden">↓</div>
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-5xl mb-2">🎬</div>
+                        <h4 class="text-lg font-bold">事業者</h4>
+                        <p class="text-sm text-gray-500">感動を企画・実行</p>
+                        <p class="font-bold text-xl mt-2 text-[#4ECDC4]">⬇</p>
+                        <p class="font-semibold">感動体験の提供</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                     <div class="flow-arrow md:hidden">↓</div>
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-5xl mb-2">💖</div>
+                        <h4 class="text-lg font-bold">ターゲット</h4>
+                        <p class="text-sm text-gray-500">最高の思い出を得る</p>
+                         <p class="font-bold text-xl mt-2 text-[#4ECDC4]">⬇</p>
+                        <p class="font-semibold">感謝と口コミ</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">収益のエンジン</h3>
+                <p class="text-center text-gray-600 mb-6">感動体験を核として、複数の強力な収益源を構築します。</p>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </section>
+
+            <section class="card">
+                 <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">主な利用者層</h3>
+                <p class="text-center text-gray-600 mb-6">特別な日を祝う個人がメインターゲットです。</p>
+                <div class="chart-container">
+                    <canvas id="targetAudienceChart"></canvas>
+                </div>
+            </section>
+
+            <section class="card xl:col-span-2">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">提供する2つの感動体験プラン</h3>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="flex-1 p-6 bg-rose-50 rounded-2xl text-center border-2 border-rose-200">
+                        <div class="text-5xl mb-4">💍</div>
+                        <h4 class="text-xl font-bold text-rose-800">メモリアル・ジャーニー</h4>
+                        <p class="font-semibold text-rose-600 mt-1">for プロポーズ・記念日</p>
+                        <p class="mt-4 text-rose-700">目的地に着くまでの時間も、手紙や音楽で感動的に演出。移動空間が忘れられないサプライズの舞台に変わります。</p>
+                    </div>
+                    <div class="flex-1 p-6 bg-teal-50 rounded-2xl text-center border-2 border-teal-200">
+                        <div class="text-5xl mb-4">👨‍👩‍👧</div>
+                        <h4 class="text-xl font-bold text-teal-800">親孝行代行エクスプレス</h4>
+                        <p class="font-semibold text-teal-600 mt-1">for 離れて暮らすご両親へ</p>
+                        <p class="mt-4 text-teal-700">お子様からのビデオレターなど”想い”を乗せてご両親をご案内。心の繋がりを届ける新しい親孝行の形です。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card md:col-span-2 xl:col-span-3">
+                <h3 class="text-2xl font-bold text-center mb-2 text-gray-800">事業の核心価値</h3>
+                <p class="text-xl text-center font-semibold gradient-text mb-8">「一瞬の感動を、永遠の価値へ」</p>
+                <p class="text-center max-w-3xl mx-auto text-gray-600 mb-10">
+                    私たちの最大の強みは、イベントを成功させることだけではありません。<strong class="text-[#45B7D1]">消えゆく一瞬の感動を、何度でも見返せる「映像作品」として昇華させ、恒久的な価値を創造すること</strong>です。この映像コンテンツが、お客様にとって一生の宝物となり、私たちの事業にとって揺るぎない収益の柱となります。
+                </p>
+                <div class="flex justify-center items-center space-x-4 md:space-x-8 text-center font-bold">
+                    <div class="flex flex-col items-center">
+                         <div class="text-4xl p-4 bg-gray-100 rounded-full mb-2">🎉</div>
+                         <p>感動体験</p>
+                    </div>
+                    <div class="text-4xl text-[#FF6B6B]">+</div>
+                    <div class="flex flex-col items-center">
+                         <div class="text-4xl p-4 bg-gray-100 rounded-full mb-2">🎬</div>
+                         <p>映像作品</p>
+                    </div>
+                     <div class="text-4xl text-[#FF6B6B]">=</div>
+                    <div class="flex flex-col items-center">
+                         <div class="text-4xl p-4 bg-gray-100 rounded-full mb-2">💎</div>
+                         <p>無限の可能性</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center py-12">
+            <p class="text-gray-500">Surprise On Wheels - Creating Unforgettable Moments</p>
+        </footer>
+
+    </div>
+
+    <script>
+        window.onload = function() {
+            const wrapLabel = (label) => {
+                const maxLen = 16;
+                if (label.length <= maxLen) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).length > maxLen && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine);
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            const revenueColors = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#45B7D1'];
+
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            new Chart(revenueCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['イベント演出料', '映像制作サービス', '「動く結婚式」パッケージ', 'パートナー連携'],
+                    datasets: [{
+                        label: '収益割合',
+                        data: [40, 35, 15, 10],
+                        backgroundColor: revenueColors,
+                        borderColor: '#F7FFF7',
+                        borderWidth: 4,
+                        hoverOffset: 16
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    size: 14,
+                                    family: "'Noto Sans JP', sans-serif"
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+
+            const targetAudienceCtx = document.getElementById('targetAudienceChart').getContext('2d');
+            new Chart(targetAudienceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['カップル・家族 (記念日)', '子供世代 (親孝行)'],
+                    datasets: [{
+                        label: '市場ポテンシャル',
+                        data: [65, 35],
+                        backgroundColor: [
+                            'rgba(255, 107, 107, 0.7)',
+                            'rgba(78, 205, 196, 0.7)'
+                        ],
+                        borderColor: [
+                            '#FF6B6B',
+                            '#4ECDC4'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                         ...tooltipTitleCallback.plugins,
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false
+                            }
+                        },
+                        y: {
+                           grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+
+</body>
+</html>
